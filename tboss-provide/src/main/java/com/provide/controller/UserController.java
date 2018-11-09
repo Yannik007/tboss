@@ -1,5 +1,6 @@
 package com.provide.controller;
 
+import com.provide.entity.EsUser;
 import com.provide.entity.User;
 import com.provide.service.UserService;
 import org.slf4j.Logger;
@@ -38,6 +39,22 @@ public class UserController {
         return result.toString();
     }
 
+    @RequestMapping(value = "/es",method = RequestMethod.POST)
+    @ResponseBody
+    public String save(@RequestBody EsUser esUser){
+        log.info("创建用户，参数：{}",esUser);
+        EsUser result= userServie.save(esUser);
+        log.info("创建用户，结果：{}",result);
+        return result.toString();
+    }
+
+    @RequestMapping(value = "/es",method = RequestMethod.GET)
+    @ResponseBody
+    public Page<EsUser> query(String username, @RequestParam(defaultValue = "0") int pageNum, @RequestParam(defaultValue = "10") int pageSize){
+        PageRequest pageRequest = PageRequest.of(pageNum, pageSize, Sort.unsorted());
+        Page<EsUser> result = userServie.getAllUser(username,pageRequest);
+        return result;
+    }
 
     @RequestMapping(value = "",method = RequestMethod.GET)
     @ResponseBody

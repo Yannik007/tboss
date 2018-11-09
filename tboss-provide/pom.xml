@@ -14,34 +14,11 @@
 		<version>1.0</version>
 	</parent>
 	<dependencies>
-		<!--<dependency>
-			<groupId>com.alibaba.spring.boot</groupId>
-			<artifactId>dubbo-spring-boot-starter</artifactId>
-			<version>2.0.0</version>
-			<exclusions>
-				<exclusion>
-					<groupId>log4j</groupId>
-					 <artifactId>log4j</artifactId>
-				 </exclusion>
-				 <exclusion>
-					 <groupId>commons-logging</groupId>
-					 <artifactId>commons-logging</artifactId>
-				 </exclusion>
-				 <exclusion>
-					 <groupId>org.springframework</groupId>
-					 <artifactId>spring</artifactId>
-				 </exclusion>
-				 <exclusion>
-					 <groupId>com.alibaba</groupId>
-					 <artifactId>fastjson</artifactId>
-				 </exclusion>
-			 </exclusions>
-		</dependency>
+		<!-- Spring Boot Elasticsearch 依赖 -->
 		<dependency>
-			<groupId>com.101tec</groupId>
-			<artifactId>zkclient</artifactId>
-			<version>0.10</version>
-		</dependency>-->
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-elasticsearch</artifactId>
+		</dependency>
 	</dependencies>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
