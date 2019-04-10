@@ -1,32 +1,32 @@
-spring:
-  profiles:
-    active: dev
-  datasource:
-          driver-class-name: com.mysql.jdbc.Driver
-          url: jdbc:mysql://127.0.0.1:3306/tboss
-          username: root
-          password: 123
-  jpa:
-    hibernate:
-      ddl-auto: update
-    show-sql: true
-    ## Dubbo 服务提供者配置
-  dubbo:
-    application:
-      name: tboss-app
-    registry: # N/A
-        address: zookeeper://127.0.0.1:2181
-        id: my-registry
-    protocol:
-      id: dubbo
-      name: dubbo
-      port: 20880
-    scan: com.provide.service
-  data:
-    elasticsearch:
-      repositories:
-        enabled: true
-      cluster-name: tyw
-      cluster-nodes: 127.0.0.1:9300
-server:
-  port: 8082
+#spring:
+#  profiles:
+#    active: dev
+#  datasource:
+#          driver-class-name: com.mysql.jdbc.Driver
+#          url: jdbc:mysql://127.0.0.1:3306/tboss
+#          username: root
+#          password: 123
+#  jpa:
+#    hibernate:
+#      ddl-auto: update
+#    show-sql: true
+#    ## Dubbo 服务提供者配置
+#  dubbo:
+#    application:
+#      name: tboss-app
+#    registry: # N/A
+#        address: zookeeper://127.0.0.1:2181
+#        id: my-registry
+#    protocol:
+#      id: dubbo
+#      name: dubbo
+#      port: 20880
+#    scan: com.provide.service
+#  data:
+#    elasticsearch:
+#      repositories:
+#        enabled: true
+#      cluster-name: tyw
+#      cluster-nodes: 127.0.0.1:9300
+#server:
+#  port: 8083

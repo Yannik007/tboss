@@ -10,19 +10,22 @@ public enum UserState {
     /**
      *注释
      */
-    INIT("初始化"),
+    INIT(0,"初始化"),
     /**
      *注释
      */
-    ACTIVE("使用中"),
+    ACTIVE(1,"使用中"),
     /**
      *注释
      */
-    FAIL("禁用");
+    FAIL(2,"禁用");
 
     private String desc;
 
-    UserState(String desc) {
+    private Integer code;
+
+    UserState(Integer code,String desc) {
+        this.code = code;
         this.desc = desc;
     }
 
@@ -30,4 +33,15 @@ public enum UserState {
         return desc;
     }
 
+    public void setDesc(String desc) {
+        this.desc = desc;
+    }
+
+    public Integer getCode() {
+        return code;
+    }
+
+    public void setCode(Integer code) {
+        this.code = code;
+    }
 }

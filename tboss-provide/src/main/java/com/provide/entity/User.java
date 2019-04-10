@@ -31,7 +31,7 @@ public class User implements Serializable {
     /**
     * @see com.provide.entity.UserState
     * */
-    private String state;
+    private Integer state;
 
     public User() {
     }
@@ -88,11 +88,11 @@ public class User implements Serializable {
         this.updateTime = updateTime;
     }
 
-    public String getState() {
+    public Integer getState() {
         return state;
     }
 
-    public void setState(String state) {
+    public void setState(Integer state) {
         this.state = state;
     }
 }

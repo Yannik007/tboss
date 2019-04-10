@@ -1,6 +1,7 @@
 package com.provide.controller;
 
 import com.provide.entity.User;
+import com.provide.entity.UserState;
 import com.provide.repository.UserRepository;
 import com.provide.service.UserService;
 import org.junit.Assert;
@@ -53,7 +54,7 @@ public class UserControllerTest {
         User user = new User();
         user.setId(1);
         user.setUsername("consumer");
-        user.setState("INIT");
+        user.setState(UserState.INIT.getCode());
         user.setPassword("123456");
         user.setCreateTime(new Date());
         userServie.save(user);
@@ -65,7 +66,7 @@ public class UserControllerTest {
         try{
             User user = new User();
             user.setId(3);
-            user.setState("INIT");
+            user.setState(UserState.INIT.getCode());
             user.setPassword("123456");
             user.setCreateTime(new Date());
             User result = userServie.save(user);
@@ -82,7 +83,7 @@ public class UserControllerTest {
     public void before() {
         User user = new User();
         user.setId(18);
-        user.setState("INIT");
+        user.setState(UserState.INIT.getCode());
         user.setPassword("123456");
         user.setCreateTime(new Date());
         user.setUsername("AAA");
