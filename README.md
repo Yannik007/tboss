@@ -1,5 +1,5 @@
 # tboss
-springboot 整合dubbo,zookeeper,elasticsearch
+springboot 整合jpa,dubbo,zookeeper,elasticsearch
 
 
 
